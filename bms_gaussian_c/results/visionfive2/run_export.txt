@@ -1,0 +1,56 @@
+=======================================================================
+bms - single-cell 3D heat diffusion, central Gaussian heat source
+=======================================================================
+Thermal properties
+  k     = 1.0400 W/(m K)
+  rho   = 1555.0 kg/m^3
+  Cp    = 1437.0 J/(kg K)
+  alpha = 4.6542e-07 m^2/s
+dx    = 5.0000e-04 m
+dt    = 8.018666e-02 s  (0.90 x stability limit 8.909629e-02 s)
+r     = 0.149282   (pure-conduction limit 1/6 = 0.166667)
+-----------------------------------------------------------------------
+Cell      : 20.0 x 20.0 x 20.0 mm cube
+Grid      : 41^3 = 68921 nodes  (dx = 0.50 mm)
+Ambient   : 25.0 C
+Cooling   : natural convection, h = 10.0 W/(m^2 K)
+Biot      : Bi = h*L/k = 0.192
+Heat source
+  total   : 2.00 W  (161 W/kg)
+  shape   : Gaussian about the centre, sigma = 2.00 mm
+  peak    : 1.5873e+07 W/m^3  (7.104 K/s at the core, not everywhere)
+  spread  : effective source volume = 1.57% of the cell
+Shutdown
+  trigger : surface >= 60.0 C
+  action  : stop advancing the field
+Time constant rho*Cp*V/(h*A) = 744.85 s
+=======================================================================
+Initial condition: cell at 25.0 C, central heat source ON
+  source  : 2.00 W, Gaussian at the centre, sigma = 2.0 mm
+  peak    : 1.5873e+07 W/m^3 at the core
+  stop    : surface >= 60.0 C
+-----------------------------------------------------------------------
+[step    500] t =     40.093 s | T_core =   67.3305 C | T_surf =   28.6234 C
+[step   1000] t =     80.187 s | T_core =   73.6122 C | T_surf =   33.3175 C
+[step   1500] t =    120.280 s | T_core =   78.1401 C | T_surf =   37.4829 C
+[step   2000] t =    160.373 s | T_core =   82.2527 C | T_surf =   41.3836 C
+[step   2500] t =    200.467 s | T_core =   86.1296 C | T_surf =   45.0781 C
+[step   3000] t =    240.560 s | T_core =   89.8055 C | T_surf =   48.5837 C
+[step   3500] t =    280.653 s | T_core =   93.2940 C | T_surf =   51.9109 C
+[step   4000] t =    320.747 s | T_core =   96.6052 C | T_surf =   55.0691 C
+[step   4500] t =    360.840 s | T_core =   99.7482 C | T_surf =   58.0668 C
+-----------------------------------------------------------------------
+  == LIMIT REACHED  t = 387.863 s   (step 4837)
+     surface      : 60.0008 C   (limit 60.0 C)
+     centre       : 101.7759 C   (+41.7751 K above the surface)
+     -> simulation frozen at this frame
+-----------------------------------------------------------------------
+Peak cell temperature   : 101.7759 C
+Energy stored above amb : 632.5409 J
+Energy generated        : 775.7258 J
+Energy convected away   : 143.1849 J
+-----------------------------------------------------------------------
+Timing
+  wall    : 54.217300 s
+  per step: 11.2089 ms
+  workload: solve + CSV export (not comparable with a plain run)
