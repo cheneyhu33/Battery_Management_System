@@ -1,0 +1,11 @@
+host      : starfive
+board     : StarFive VisionFive 2 (JH7110)
+cpu       : SiFive U74 x4 (rv64imafdc, in-order)
+max clock : 1500000 kHz
+governor  : ondemand (runs 1-3) / performance, pinned 1500000 kHz (runs 4-8)
+os        : Debian GNU/Linux trixie/sid
+kernel    : 6.12.5-starfive
+gcc       : cc (Debian 12.2.0-14) 12.2.0
+memory    : 3.8Gi
+storage   : 27G eMMC
+network   : Wi-Fi (SSH over LAN)

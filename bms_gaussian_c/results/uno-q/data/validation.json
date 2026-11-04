@@ -1,0 +1,27 @@
+{
+  "source": "bms_gaussian.c --export, run on the board",
+  "temperature_history_sha256": "d9825a221c0f02ab94aaaeb2fb3a0270c1f0fb3ff3a91faffe36d93c68899929",
+  "midplane_slices_sha256": "c44f3ddbb2671897b81ec6651b51598d3d9c0bcce28e28568e638c17f6096f56",
+  "trip_step": 4837,
+  "trip_time_s": 387.862887,
+  "surface_at_trip_C": 60.0007709814,
+  "core_at_trip_C": 101.7759097357,
+  "core_minus_surface_K": 41.775138754299995,
+  "peak_C": 101.7759097357,
+  "min_C_at_trip": 52.1587476634,
+  "energy_stored_J": 632.5408713817,
+  "energy_generated_J": 775.725774,
+  "snapshot_steps": [
+    0,
+    100,
+    500,
+    1000,
+    2000,
+    3000,
+    4000,
+    4837
+  ],
+  "cell_mm": 20.0,
+  "nodes": 41,
+  "validation": "finite; core >= surface; core rises monotonically; every slice symmetric under both axes; final surface >= 60 C"
+}

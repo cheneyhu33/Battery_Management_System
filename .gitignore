@@ -1,0 +1,14 @@
+.DS_Store
+__pycache__/
+*.pyc
+
+# Compiled binary
+bms_gaussian
+
+# Generated field dumps (`--volume`) and packaged handouts
+*.f32
+volume/
+*.zip
+
+# Timestamped edit backups
+*.bak-*

@@ -1,0 +1,22 @@
+== board ==
+Linux BeagleBone 5.10.153-ti-arm64-r86 #1bullseye SMP Wed Jan 4 19:47:11 UTC 2023 aarch64 GNU/Linux
+
+== cpu ==
+2
+CPU part	: 0xd08
+CPU part	: 0xd08
+
+== cpu frequency ==
+no cpufreq
+
+== memory ==
+MemTotal:        2230044 kB
+
+== compiler ==
+cc (Debian 10.2.1-6) 10.2.1 20210110
+
+== binary ==
+-rwxr-xr-x 1 debian debian 22640 Oct 14 05:57 bms_gaussian
+
+== load at start ==
+0.22 0.07 0.08 1/197 1219

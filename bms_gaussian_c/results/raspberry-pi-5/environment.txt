@@ -1,0 +1,26 @@
+== board ==
+Linux BMSRASPBERRY 7.0.0-1020-raspi #20-Ubuntu SMP PREEMPT_DYNAMIC Fri Sep 11 16:02:28 UTC 2026 aarch64 GNU/Linux
+
+== cpu ==
+4
+CPU part	: 0xd0b
+CPU part	: 0xd0b
+CPU part	: 0xd0b
+CPU part	: 0xd0b
+
+== cpu frequency ==
+ondemand
+1900000
+2400000
+
+== memory ==
+MemTotal:        2012868 kB
+
+== compiler ==
+cc (Ubuntu 15.2.0-16ubuntu1) 15.2.0
+
+== binary ==
+-rwxrwxr-x 1 bms bms 71496 Oct 28 19:40 bms_gaussian
+
+== load at start ==
+0.42 0.47 0.29 2/188 3530
